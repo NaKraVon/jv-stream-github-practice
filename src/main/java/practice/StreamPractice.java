@@ -24,12 +24,13 @@ public class StreamPractice {
                     try {
                         return Integer.parseInt(s.trim());
                     } catch (NumberFormatException e) {
-                        throw new RuntimeException("Can't get min value from list");
+                        throw new RuntimeException("Can't get min value from list: " + numbers);
                     }
                 })
                 .filter(n -> n % 2 == 0)
                 .min()
-                .orElseThrow(() -> new RuntimeException("Can't get min value from list"));
+                .orElseThrow(() -> new RuntimeException(
+                        "Can't get min value from list: " + numbers));
     }
 
     /**
