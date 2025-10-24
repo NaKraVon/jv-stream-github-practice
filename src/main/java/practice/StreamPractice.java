@@ -47,8 +47,6 @@ public class StreamPractice {
                     }
                     return value;
                 })
-                .toList()
-                .stream()
                 .filter(n -> n % 2 != 0)
                 .mapToInt(Integer::intValue)
                 .average()
